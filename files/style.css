@@ -41,5 +41,6 @@ footer > article {
     display: flex;
     justify-content: center;
     color: white;
-    
+    font-size: 14px;
+    font-family: 'Figtree';
 }
