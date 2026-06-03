@@ -1,8 +1,10 @@
+/* Allgemeine Einstellungen */
 * {
     margin: 0px;
     box-sizing: border-box;
 }
 
+/* Kopfzeile */
 header {
     background-color: darkblue;
 }
@@ -13,4 +15,31 @@ header > section {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: max(calc(50% - 720px), 140px);
+}
+
+/* Fußzeile */
+footer {
+    background-color: darkblue;
+}
+
+footer > article {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.developer_akademie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    color: white;
+    
 }
