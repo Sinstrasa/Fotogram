@@ -29,12 +29,49 @@
         <section class="gallery">
           <ul>
             <li>
-              <img
-                src="../assets/images/alaska-810433_1280.jpg"
-                alt="Bild 1: Alaska"
-              />
+              <button onclick="openDialog()">
+                <img
+                  src="../assets/images/alaska-810433_1280.jpg"
+                  alt="Bild 1: Alaska"
+                />
+              </button>
             </li>
           </ul>
+        </section>
+        <!-- Das Dialogfenster -->
+        <section>
+          <dialog>
+            <article>
+              <section class="dialog_head">
+                <h2>alaska-810433_1280</h2>
+                <button class="close">
+                  <img
+                    src="../assets/icons/close.svg"
+                    alt="Kreuz zum Schließen des Fensters"
+                  />
+                </button>
+              </section>
+              <img
+                src="../assets/images/alaska-810433_1280.jpg"
+                alt="Bild in Nahaufnahme"
+              />
+              <section class="dialog_foot">
+                <button class="arrow_left">
+                  <img
+                    src="../assets/icons/arrow_red.svg"
+                    alt="Roter Pfeil der nach links zeigt"
+                  />
+                </button>
+                <p>1/12</p>
+                <button class="arrow_right">
+                  <img
+                    src="../assets/icons/arrow_red.svg"
+                    alt="Roter Pfeil der nach rechts zeigt"
+                  />
+                </button>
+              </section>
+            </article>
+          </dialog>
         </section>
       </article>
     </main>

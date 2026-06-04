@@ -37,11 +37,36 @@ main {
   font-weight: 800;
 }
 
-li > img {
+button {
+  border: 0px;
+  background-color: white;
+}
+
+button > img {
   width: 150px;
   height: 150px;
   border: 2px solid black;
   border-radius: 16px;
+}
+
+/* Das Dialogfenster */
+.dialog_head {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: 'Figtree';
+  font-weight: 700;
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
 }
 
 /* Fußzeile */
