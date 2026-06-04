@@ -1,65 +1,73 @@
 /* Allgemeine Einstellungen */
 * {
-    margin: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
 }
 
 /* Kopfzeile */
 header {
-    background-color: darkblue;
+  background-color: darkblue;
 }
 
 header > section {
-    display: flex;
-    gap: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: max(calc(50% - 720px), 140px);
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: max(calc(50% - 720px), 140px);
 }
 
 /* Der Inhalt der Webseite */
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 160px 0px;
-}
-
-.photoalbum {
-    gap: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 160px 0px;
 }
 
 .photoalbum > p {
-    font-size: 56px;
-    font-family: 'Figtree';
-    font-weight: 800;
+  font-size: 56px;
+  font-family: "Figtree";
+  font-weight: 800;
+}
+
+li > img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 16px;
 }
 
 /* Fußzeile */
 footer {
-    background-color: darkblue;
+  background-color: darkblue;
 }
 
 footer > article {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .developer_akademie {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .copyright {
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 14px;
-    font-family: 'Figtree';
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-family: "Figtree";
 }
