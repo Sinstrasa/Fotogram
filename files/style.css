@@ -9,6 +9,10 @@ ul {
   padding: 0px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* Kopfzeile */
 header {
   background-color: darkblue;
@@ -49,7 +53,6 @@ main {
 
 .gallery button:hover {
   border: 2px solid blueviolet;
-  cursor: pointer;
 }
 
 button > img {
@@ -60,9 +63,30 @@ button > img {
 }
 
 /* Das Dialogfenster */
+.dialogfenster {
+  padding: 0px;
+  width: 700px;
+  height: 675px;
+  border: none;
+  border-radius: 40px;
+}
+
+.dialog_gap {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
 .dialog_head {
   display: flex;
   justify-content: space-between;
+  padding-top: 56px;
+  margin: 0px 70px;
+}
+
+dialog > article > img {
+  margin: 0px 70px;
+  width: 560px;
 }
 
 h2 {
@@ -77,6 +101,42 @@ h2 {
   background-color: black;
   border: none;
   border-radius: 50%;
+}
+
+.cross {
+  width: 16px;
+  height: 16px;
+}
+
+.dialog_foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+}
+
+.dialog_foot > p {
+  font-family: 'Figtree';
+  font-weight: 500;
+}
+
+.arrow_left, .arrow_right {
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+}
+
+.arrow_l {
+  width: 24px;
+  height: 20px;
+  transform: rotate(180deg);
+}
+
+.arrow_r {
+  width: 24px;
+  height: 20px;
 }
 
 /* Fußzeile */
