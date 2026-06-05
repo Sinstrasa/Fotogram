@@ -5,8 +5,10 @@
 }
 
 ul {
-  list-style: none;
+  display: flex;
+  gap: 16px;
   padding: 0px;
+  list-style: none;
 }
 
 button:hover {
@@ -83,7 +85,7 @@ button > img {
   gap: 48px;
 }
 
-.dialog_head {
+.dialog_kopf {
   display: flex;
   justify-content: space-between;
   padding-top: 56px;
@@ -114,14 +116,14 @@ h2 {
   height: 16px;
 }
 
-.dialog_foot {
+.dialog_fuß {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 56px;
 }
 
-.dialog_foot > p {
+.dialog_fuß > p {
   font-family: 'Figtree';
   font-weight: 500;
 }

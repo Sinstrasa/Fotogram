@@ -13,7 +13,7 @@
     <script src="script.js"></script>
     <title>Fotogram</title>
   </head>
-  <body>
+  <body onload="initialise()">
     <!-- Kopfzeile -->
     <header>
       <section>
@@ -27,12 +27,12 @@
         <p>Your personal photo album</p>
         <!-- Die Bilderreihe -->
         <section class="gallery">
-          <ul>
+          <ul id="list">
             <li>
               <button onclick="openDialog()">
                 <img
                   src="../assets/images/alaska-810433_1280.jpg"
-                  alt="Bild 1"
+                  alt="Bild"
                 />
               </button>
             </li>
@@ -42,7 +42,7 @@
         <section>
           <dialog class="dialogfenster" id="dialog_window">
             <article class="dialog_gap">
-              <section class="dialog_head">
+              <section class="dialog_kopf" id="dialog_head">
                 <h2>alaska-810433_1280</h2>
                 <button class="close" onclick="closeDialog()">
                   <img class="cross"
@@ -55,7 +55,7 @@
                 src="../assets/images/alaska-810433_1280.jpg"
                 alt="Bild in Nahaufnahme"
               />
-              <section class="dialog_foot">
+              <section class="dialog_fuß" id="dialog_foot">
                 <button class="arrow_left">
                   <img class="arrow_l"
                     src="../assets/icons/arrow_red.svg"
