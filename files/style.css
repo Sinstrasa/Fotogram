@@ -36,6 +36,12 @@ main {
   background-color: lightgrey;
 }
 
+.photoalbum {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
 .photoalbum > p {
   font-size: 56px;
   font-family: "Figtree";
