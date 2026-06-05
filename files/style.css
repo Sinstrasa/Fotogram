@@ -6,8 +6,11 @@
 
 ul {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 16px;
   padding: 0px;
+  width: 100%;
   list-style: none;
 }
 
@@ -42,17 +45,19 @@ main {
   display: flex;
   flex-direction: column;
   gap: 80px;
+  padding: 0px max(calc(50% - 720px), 135px);
 }
 
-.photoalbum > p {
+h2 {
+  text-align: center;
   font-size: 56px;
   font-family: "Figtree";
   font-weight: 800;
 }
 
 .gallery button {
-  width: 153px;
-  height: 152px;
+  width: 154px;
+  height: 154px;
   padding: 0px;
   background-color: white;
   border: 2px solid darkblue;
@@ -67,7 +72,7 @@ button > img {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 12px;
 }
 
 /* Das Dialogfenster */
@@ -97,7 +102,7 @@ dialog > article > img {
   width: 560px;
 }
 
-h2 {
+h3 {
   font-size: 24px;
   font-family: 'Figtree';
   font-weight: 700;

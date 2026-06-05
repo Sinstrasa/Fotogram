@@ -29,10 +29,10 @@ let bilderPfad = [
 ];
 
 function initialise() {
-    copyGallery();
+  copyGallery();
 }
 
-function openDialog() {
+function openDialog(x) {
   let dialogRef = document.getElementById("dialog_window");
   dialogRef.showModal();
 }
@@ -42,13 +42,13 @@ function closeDialog() {
   dialogRef.close();
 }
 
+// Füge in ul ein li mit button und bild ein
 function copyGallery() {
   let picRef = document.getElementById("list");
-
-  for (let i = 1; i < bilderNamen.length; i++) {
+  for (let i = 0; i < bilderNamen.length; i++) {
     picRef.innerHTML += `
                         <li>
-                        <button>
+                        <button onclick="openDialog(${i})">
                         <img src=${bilderPfad[i]} alt="Bild">
                         </button
                         </li>
