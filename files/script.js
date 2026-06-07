@@ -44,22 +44,17 @@ function closeDialog() {
 }
 
 function changeDialog(x) {
-  let dialogHead = document.getElementById("dialog_head");
+  let dialogName = document.getElementById("pictureName");
   let dialogPic = document.getElementById("picture");
   let dialogFoot = document.getElementById("counter");
-  dialogHead.innerHTML = `
+  dialogName.innerHTML = `
                           <h3>${bilderNamen[x]}</h3>
-                          <button class="close" onclick="closeDialog()">
-                          <img class="cross"
-                           src="../assets/icons/close.svg"
-                          alt="Kreuz zum Schließen des Fensters"/>
-                          </button>
                           `;
   dialogPic.innerHTML = `
                         <img src="${bilderPfad[x]}" alt="Bild in Nahaufnahme">
                         `;
   dialogFoot.innerHTML = `
-                          <p>${[x+1]}/12</p>
+                          <p>${[x + 1]}/12</p>
                           `;
 }
 
