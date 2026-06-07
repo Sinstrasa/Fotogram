@@ -128,7 +128,7 @@ h3 {
   gap: 56px;
 }
 
-.dialog_fuß  p {
+.dialog_fuß > p {
   font-family: "Figtree";
   font-weight: 500;
 }

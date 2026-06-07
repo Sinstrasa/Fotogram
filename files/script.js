@@ -46,16 +46,50 @@ function closeDialog() {
 function changeDialog(x) {
   let dialogName = document.getElementById("pictureName");
   let dialogPic = document.getElementById("picture");
-  let dialogFoot = document.getElementById("counter");
+  changeDialogFooter(x);
   dialogName.innerHTML = `
                           <h3>${bilderNamen[x]}</h3>
                           `;
   dialogPic.innerHTML = `
                         <img src="${bilderPfad[x]}" alt="Bild in Nahaufnahme">
                         `;
+}
+
+function changeDialogFooter(x) {
+  let dialogFoot = document.getElementById("dialog_foot");
   dialogFoot.innerHTML = `
+                          <button class="arrow_left" onclick="switchLeft(${x})">
+                          <img class="arrow_l"
+                          src="../assets/icons/arrow_red.svg"
+                          alt="Roter Pfeil der nach links zeigt"
+                          />
+                          </button>
                           <p>${[x + 1]}/12</p>
+                          <button class="arrow_right" onclick="switchRight(${x})">
+                          <img class="arrow_r"
+                          src="../assets/icons/arrow_red.svg"
+                          alt="Roter Pfeil der nach rechts zeigt"
+                          />
+                          </button>
                           `;
+}
+
+function switchLeft(x) {
+  if (x == 0) {
+    changeDialog(bilderNamen.length);
+  }
+  else {
+    changeDialog(x-1);
+  }
+}
+
+function switchRight(x) {
+  if (x == bilderNamen.length) {
+    changeDialog(0);
+  }
+  else {
+    changeDialog(x+1);
+  }
 }
 
 // Füge in ul ein li mit button und bild ein
