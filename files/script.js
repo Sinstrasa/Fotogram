@@ -34,12 +34,29 @@ function initialise() {
 
 function openDialog(x) {
   let dialogRef = document.getElementById("dialog_window");
+  changeDialog(x);
   dialogRef.showModal();
 }
 
 function closeDialog() {
   let dialogRef = document.getElementById("dialog_window");
   dialogRef.close();
+}
+
+function changeDialog(x) {
+  let dialogHead = document.getElementById("dialog_head");
+  let dialogPic = document.getElementById("picture");
+  dialogHead.innerHTML = `
+                          <h3>${bilderNamen[x]}</h3>
+                          <button class="close" onclick="closeDialog()">
+                          <img class="cross"
+                           src="../assets/icons/close.svg"
+                          alt="Kreuz zum Schließen des Fensters"/>
+                          </button>
+                          `;
+  dialogPic.innerHTML = `
+                        <img src="${bilderPfad[x]}" alt="Bild in Nahaufnahme">
+                        `;
 }
 
 // Füge in ul ein li mit button und bild ein
