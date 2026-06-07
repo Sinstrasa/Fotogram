@@ -46,6 +46,7 @@ function closeDialog() {
 function changeDialog(x) {
   let dialogHead = document.getElementById("dialog_head");
   let dialogPic = document.getElementById("picture");
+  let dialogFoot = document.getElementById("counter");
   dialogHead.innerHTML = `
                           <h3>${bilderNamen[x]}</h3>
                           <button class="close" onclick="closeDialog()">
@@ -57,6 +58,9 @@ function changeDialog(x) {
   dialogPic.innerHTML = `
                         <img src="${bilderPfad[x]}" alt="Bild in Nahaufnahme">
                         `;
+  dialogFoot.innerHTML = `
+                          <p>${[x+1]}/12</p>
+                          `;
 }
 
 // Füge in ul ein li mit button und bild ein
