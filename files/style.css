@@ -70,8 +70,8 @@ h2 {
 }
 
 button > img {
-  width: 152px;
-  height: 152px;
+  width: 151px;
+  height: 151px;
   object-fit: cover;
   border-radius: 16px;
 }
@@ -99,6 +99,12 @@ button > img {
 .dialog_kopf {
   display: flex;
   justify-content: space-between;
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .photo > img {
@@ -196,4 +202,73 @@ footer > article {
   color: white;
   font-size: 14px;
   font-family: "Figtree";
+}
+
+/* Responsiveness */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  header > section {
+    padding-left: 0px;
+    justify-content: center;
+  }
+
+  main {
+    padding: 40px 0px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  .photoalbum {
+    gap: 56px;
+    padding: 0px max(calc(50% - 720px), 16px);
+  }
+
+  .dialogfenster > article {
+    padding: 32px 20px;
+  }
+
+  .photo > img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  ul {
+    gap: 8px;
+  }
+
+  header > section {
+    padding-left: 0px;
+    justify-content: center;
+  }
+  
+  main {
+    padding: 40px 0px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .photoalbum {
+    gap: 56px;
+    padding: 0px max(calc(50% - 720px), 16px);
+  }
+
+  .dialogfenster > article {
+    padding: 32px 16px;
+  }
+
+  .photo > img {
+    width: 260px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .dialog_fuß {
+    gap: 48px;
+  }
 }
