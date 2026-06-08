@@ -38,7 +38,7 @@ main {
   align-items: center;
   justify-content: center;
   padding: 160px 0px;
-  background-color: lightgrey;
+  background-color: rgb(25, 25, 25);
 }
 
 .photoalbum {
@@ -53,6 +53,7 @@ h2 {
   font-size: 56px;
   font-family: "Figtree";
   font-weight: 800;
+  color: white;
 }
 
 .gallery button {
@@ -65,23 +66,27 @@ h2 {
 }
 
 .gallery button:hover {
-  border: 2px solid blueviolet;
+  border: 2px solid cyan;
 }
 
 button > img {
-  width: 150px;
-  height: 150px;
+  width: 152px;
+  height: 152px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
 /* Das Dialogfenster */
 .dialogfenster {
   padding: 0px;
   width: 700px;
-  height: 675px;
   border: none;
   border-radius: 40px;
+  background-color: rgb(25, 25, 25);
+}
+
+.dialogfenster::backdrop {
+  background-color: rgba(25, 25, 25, 0.75);
 }
 
 .dialogfenster > article {
@@ -104,6 +109,7 @@ h3 {
   font-size: 24px;
   font-family: "Figtree";
   font-weight: 700;
+  color: white;
 }
 
 .close {
@@ -112,6 +118,14 @@ h3 {
   background-color: black;
   border: none;
   border-radius: 50%;
+}
+
+.close:hover {
+  background-color: rgb(100, 100, 100);
+}
+
+.close:active {
+  background-color: rgb(50, 50, 50);
 }
 
 .cross {
@@ -129,6 +143,7 @@ h3 {
 .dialog_fuß > p {
   font-family: "Figtree";
   font-weight: 500;
+  color: white;
 }
 
 .arrow_left,
@@ -138,6 +153,10 @@ h3 {
   background-color: black;
   border: none;
   border-radius: 50%;
+}
+
+.arrow_left:hover, .arrow_right:hover {
+  background-color: rgb(95, 0, 0);
 }
 
 .arrow_l {
