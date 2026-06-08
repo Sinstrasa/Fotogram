@@ -84,21 +84,19 @@ button > img {
   border-radius: 40px;
 }
 
-.dialog_gap {
+.dialogfenster > article {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  padding: 56px 64px;
 }
 
 .dialog_kopf {
   display: flex;
   justify-content: space-between;
-  padding-top: 56px;
-  margin: 0px 70px;
 }
 
 .photo > img {
-  margin: 0px 70px;
   width: 560px;
 }
 

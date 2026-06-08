@@ -76,19 +76,17 @@ function changeDialogFooter(x) {
 
 function switchLeft(x) {
   if (x == 0) {
-    changeDialog(bilderNamen.length);
-  }
-  else {
-    changeDialog(x-1);
+    changeDialog(bilderNamen.length - 1);
+  } else {
+    changeDialog(x - 1);
   }
 }
 
 function switchRight(x) {
-  if (x == bilderNamen.length) {
+  if (x + 1 == bilderNamen.length) {
     changeDialog(0);
-  }
-  else {
-    changeDialog(x+1);
+  } else {
+    changeDialog(x + 1);
   }
 }
 
