@@ -86,7 +86,9 @@ button > img {
 /* Das Dialogfenster */
 .dialogfenster {
   padding: 0px;
+  margin: auto;
   width: 700px;
+  height: 675px;
   border: none;
   border-radius: 40px;
   background-color: rgb(25, 25, 25);
@@ -116,6 +118,8 @@ button > img {
 
 .photo > img {
   width: 560px;
+  height: 375px;
+  object-fit: cover;
 }
 
 h3 {
