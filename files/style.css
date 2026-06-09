@@ -43,7 +43,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 160px 0px;
+  padding: 80px 0px;
   flex: 1;
   background-color: rgb(25, 25, 25);
 }
@@ -51,7 +51,7 @@ main {
 .photoalbum {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 64px;
   padding: 0px max(calc(50% - 720px), 135px);
 }
 
@@ -95,7 +95,7 @@ button > img {
 }
 
 .dialogfenster::backdrop {
-  background-color: rgba(25, 25, 25, 0.75);
+  background-color: rgba(25, 25, 25, 0.20);
 }
 
 .dialogfenster > article {
@@ -246,14 +246,15 @@ footer a {
 
   .dialogfenster {
     width: 345px;
-    height: 666px;
+    height: 660px;
   }
 
   .dialogfenster > article {
+    gap: 24px;
     padding-bottom: 32px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: calc(666-height+padding-bottom);
+    padding-top: calc(660-height+padding-bottom);
   }
 
   h2 {
@@ -292,14 +293,15 @@ footer a {
 
   .dialogfenster {
     width: 315px;
-    height: 666px;
+    height: 660px;
   }
 
   .dialogfenster > article {
+    gap: 24px;
     padding-bottom: 32px;
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: calc(666-height+padding-bottom);
+    padding-top: calc(660-height+padding-bottom);
   }
 
   .photo > img {
