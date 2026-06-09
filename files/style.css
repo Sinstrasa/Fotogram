@@ -55,7 +55,7 @@ main {
   padding: 0px max(calc(50% - 720px), 135px);
 }
 
-h2 {
+h1 {
   text-align: center;
   font-size: 56px;
   font-family: "Figtree";
@@ -122,7 +122,7 @@ button > img {
   object-fit: cover;
 }
 
-h3 {
+h2 {
   font-size: 24px;
   font-family: "Figtree";
   font-weight: 700;
@@ -226,7 +226,7 @@ footer > article {
     padding: 40px 0px;
   }
 
-  h2 {
+  h1 {
     font-size: 48px;
   }
 
@@ -247,7 +247,7 @@ footer > article {
     padding-top: calc(666-height+padding-bottom);
   }
 
-  h3 {
+  h2 {
     font-size: 16px;
   }
 
@@ -272,7 +272,7 @@ footer > article {
     padding: 40px 0px;
   }
 
-  h2 {
+  h1 {
     font-size: 40px;
   }
 
@@ -299,7 +299,7 @@ footer > article {
     object-fit: cover;
   }
 
-  h3 {
+  h2 {
     font-size: 16px;
   }
 

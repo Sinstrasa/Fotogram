@@ -48,7 +48,7 @@ function changeDialog(x) {
   let dialogPic = document.getElementById("picture");
   changeDialogFooter(x);
   dialogName.innerHTML = `
-                          <h3>${bilderNamen[x]}</h3>
+                          <h2>${bilderNamen[x]}</h2>
                           `;
   dialogPic.innerHTML = `
                         <img src="${bilderPfad[x]}" alt="Bild in Nahaufnahme">
