@@ -97,7 +97,7 @@ function copyGallery() {
     picRef.innerHTML += `
                         <li>
                         <button onclick="openDialog(${i})">
-                        <img src=${bilderPfad[i]} alt="Bild">
+                        <img src=${bilderPfad[i]} alt="Bild ${[i+1]}">
                         </button
                         </li>
                         `;
