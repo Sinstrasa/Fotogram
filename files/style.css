@@ -235,12 +235,26 @@ footer > article {
     padding: 0px max(calc(50% - 720px), 16px);
   }
 
+  .dialogfenster {
+    width: 345px;
+    height: 666px;
+  }
+
   .dialogfenster > article {
-    padding: 32px 20px;
+    padding-bottom: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: calc(666-height+padding-bottom);
+  }
+
+  h3 {
+    font-size: 16px;
   }
 
   .photo > img {
     width: 300px;
+    height: 375px;
+    object-fit: cover;
   }
 }
 
@@ -267,16 +281,26 @@ footer > article {
     padding: 0px max(calc(50% - 720px), 16px);
   }
 
+  .dialogfenster {
+    width: 315px;
+    height: 666px;
+  }
+
   .dialogfenster > article {
-    padding: 32px 16px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: calc(666-height+padding-bottom);
   }
 
   .photo > img {
-    width: 260px;
+    width: 250px;
+    height: 375px;
+    object-fit: cover;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .dialog_fuß {
