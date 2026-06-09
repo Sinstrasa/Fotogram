@@ -215,6 +215,15 @@ footer > article {
   font-family: "Figtree";
 }
 
+footer a {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-family: "Figtree";
+  text-decoration: none;
+  color: white;
+}
+
 /* Responsiveness */
 @media screen and (min-width: 375px) and (max-width: 767px) {
   header > section {
