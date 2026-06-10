@@ -29,7 +29,7 @@ let bilderPfad = [
 ];
 
 function initialise() {
-  // closeBackdrop();
+  closeBackdrop();
   copyGallery();
 }
 
@@ -46,20 +46,20 @@ function closeDialog() {
   document.body.classList.toggle("dialog_offen");
 }
 
-// function closeBackdrop() {
-//   const dialog = document.querySelector("dialog");
-//   dialog.addEventListener("click", (event) => {
-//     const dialogDimensons = dialog.getBoundingClientRect();
-//     if (
-//       event.clientX < dialogDimensons.left ||
-//       event.clientX > dialogDimensons.right ||
-//       event.clientY < dialogDimensons.top ||
-//       event.clientY > dialogDimensons.bottom
-//     ) {
-//       closeDialog();
-//     }
-//   });
-// }
+function closeBackdrop() {
+  const dialog = document.querySelector("dialog");
+  dialog.addEventListener("click", (event) => {
+    const dialogDimensons = dialog.getBoundingClientRect();
+    if (
+      event.clientX < dialogDimensons.left ||
+      event.clientX > dialogDimensons.right ||
+      event.clientY < dialogDimensons.top ||
+      event.clientY > dialogDimensons.bottom
+    ) {
+      closeDialog();
+    }
+  });
+}
 
 function changeDialog(x) {
   let dialogName = document.getElementById("pictureName");
