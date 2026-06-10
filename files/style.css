@@ -188,6 +188,10 @@ h2 {
   height: 20px;
 }
 
+.dialog_offen {
+  overflow: hidden;
+}
+
 /* Fußzeile */
 footer {
   background-color: darkblue;
