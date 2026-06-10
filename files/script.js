@@ -29,6 +29,18 @@ let bilderPfad = [
 ];
 
 function initialise() {
+  const dialog = document.querySelector("dialog");
+  dialog.addEventListener("click", (event) => {
+    const dialogDimensons = dialog.getBoundingClientRect();
+    if (
+      event.clientX < dialogDimensons.left ||
+      event.clientX > dialogDimensons.right ||
+      event.clientY < dialogDimensons.top ||
+      event.clientY > dialogDimensons.bottom
+    ) {
+      closeDialog();
+    }
+  });
   copyGallery();
 }
 
@@ -97,7 +109,7 @@ function copyGallery() {
     picRef.innerHTML += `
                         <li>
                         <button onclick="openDialog(${i})">
-                        <img src=${bilderPfad[i]} alt="Bild ${[i+1]}">
+                        <img src=${bilderPfad[i]} alt="Bild ${[i + 1]}">
                         </button
                         </li>
                         `;

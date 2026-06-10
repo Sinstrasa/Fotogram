@@ -95,6 +95,7 @@ button > img {
 }
 
 .dialogfenster::backdrop {
+  backdrop-filter: blur(4px);
   background-color: rgba(25, 25, 25, 0.20);
 }
 
