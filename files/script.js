@@ -34,7 +34,7 @@ function initialise() {
 
 function openDialog(x) {
   let dialogRef = document.getElementById("dialog_window");
-  changeDialog(x);
+  createDialog(x);
   dialogRef.showModal();
   document.body.classList.toggle("dialog_offen");
 }
@@ -49,29 +49,37 @@ function stopPropagation(event) {
   event.stopPropagation();
 }
 
-function changeDialog(x) {
-  let dialogName = document.getElementById("pictureName");
-  let dialogPic = document.getElementById("picture");
-  changeDialogFooter(x);
-  dialogName.innerHTML = `
-                          <h2>${bilderNamen[x]}</h2>
-                          `;
-  dialogPic.innerHTML = `
-                        <img src="${bilderPfad[x]}" alt="Bild in Nahaufnahme">
-                        `;
+function createDialog(number) {
+  dialogName(number);
+  dialogPic(number);
+  dialogFooter(number);
 }
 
-function changeDialogFooter(x) {
+function dialogName(number) {
+  let dialog = document.getElementById("pictureName");
+  dialog.innerHTML = `
+                      <h2>${bilderNamen[number]}</h2>
+                      `;
+}
+
+function dialogPic(number) {
+  let dialog = document.getElementById("picture");
+  dialog.innerHTML = `
+                    <img src="${bilderPfad[number]}" alt="Bild in Nahaufnahme">
+                    `;
+}
+
+function dialogFooter(number) {
   let dialogFoot = document.getElementById("dialog_foot");
   dialogFoot.innerHTML = `
-                          <button class="arrow_left" id="left" onclick="switchPic(${x}, ${false}), getFocus('left')">
+                          <button class="arrow_left" id="left" onclick="switchPic(${number}, ${false}), getFocus('left')">
                           <img class="arrow_l"
                           src="../assets/icons/arrow_red.svg"
                           alt="Roter Pfeil der nach links zeigt"
                           />
                           </button>
-                          <p>${[x + 1]}/12</p>
-                          <button class="arrow_right" id="right" onclick="switchPic(${x}, ${true}), getFocus('right')">
+                          <p>${[number + 1]}/12</p>
+                          <button class="arrow_right" id="right" onclick="switchPic(${number}, ${true}), getFocus('right')">
                           <img class="arrow_r"
                           src="../assets/icons/arrow_red.svg"
                           alt="Roter Pfeil der nach rechts zeigt"
@@ -83,15 +91,15 @@ function changeDialogFooter(x) {
 function switchPic(x, bool) {
   if (bool) {
     if (x + 1 == bilderNamen.length) {
-      changeDialog(0);
+      createDialog(0);
     } else {
-      changeDialog(x + 1);
+      createDialog(x + 1);
     }
   } else {
     if (x == 0) {
-      changeDialog(bilderNamen.length - 1);
+      createDialog(bilderNamen.length - 1);
     } else {
-      changeDialog(x - 1);
+      createDialog(x - 1);
     }
   }
 }
