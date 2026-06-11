@@ -64,14 +64,14 @@ function changeDialog(x) {
 function changeDialogFooter(x) {
   let dialogFoot = document.getElementById("dialog_foot");
   dialogFoot.innerHTML = `
-                          <button class="arrow_left" onclick="switchPic(${x}, ${false})">
+                          <button class="arrow_left" id="left" onclick="switchPic(${x}, ${false}), getFocus('left')">
                           <img class="arrow_l"
                           src="../assets/icons/arrow_red.svg"
                           alt="Roter Pfeil der nach links zeigt"
                           />
                           </button>
                           <p>${[x + 1]}/12</p>
-                          <button class="arrow_right" onclick="switchPic(${x}, ${true})">
+                          <button class="arrow_right" id="right" onclick="switchPic(${x}, ${true}), getFocus('right')">
                           <img class="arrow_r"
                           src="../assets/icons/arrow_red.svg"
                           alt="Roter Pfeil der nach rechts zeigt"
@@ -94,6 +94,10 @@ function switchPic(x, bool) {
       changeDialog(x - 1);
     }
   }
+}
+
+function getFocus(id) {
+  document.getElementById(id).focus();
 }
 
 // Füge in ul ein li mit button und bild ein
