@@ -31,8 +31,8 @@
         </section>
         <!-- Das Dialogfenster -->
         <section>
-          <dialog class="dialogfenster" id="dialog_window">
-            <article>
+          <dialog class="dialogfenster" id="dialog_window" onclick="closeDialog()">
+            <article onclick="stopPropagation(event)">
               <section class="dialog_kopf" id="dialog_head">
                 <div class="photoName" id="pictureName"></div>
                 <button class="close" onclick="closeDialog()">
