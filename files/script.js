@@ -64,14 +64,14 @@ function changeDialog(x) {
 function changeDialogFooter(x) {
   let dialogFoot = document.getElementById("dialog_foot");
   dialogFoot.innerHTML = `
-                          <button class="arrow_left" onclick="switchLeft(${x})">
+                          <button class="arrow_left" onclick="switchPic(${x}, ${false})">
                           <img class="arrow_l"
                           src="../assets/icons/arrow_red.svg"
                           alt="Roter Pfeil der nach links zeigt"
                           />
                           </button>
                           <p>${[x + 1]}/12</p>
-                          <button class="arrow_right" onclick="switchRight(${x})">
+                          <button class="arrow_right" onclick="switchPic(${x}, ${true})">
                           <img class="arrow_r"
                           src="../assets/icons/arrow_red.svg"
                           alt="Roter Pfeil der nach rechts zeigt"
@@ -80,19 +80,19 @@ function changeDialogFooter(x) {
                           `;
 }
 
-function switchLeft(x) {
-  if (x == 0) {
-    changeDialog(bilderNamen.length - 1);
+function switchPic(x, bool) {
+  if (bool) {
+    if (x + 1 == bilderNamen.length) {
+      changeDialog(0);
+    } else {
+      changeDialog(x + 1);
+    }
   } else {
-    changeDialog(x - 1);
-  }
-}
-
-function switchRight(x) {
-  if (x + 1 == bilderNamen.length) {
-    changeDialog(0);
-  } else {
-    changeDialog(x + 1);
+    if (x == 0) {
+      changeDialog(bilderNamen.length - 1);
+    } else {
+      changeDialog(x - 1);
+    }
   }
 }
 
